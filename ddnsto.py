@@ -44,8 +44,8 @@ def select_list(cookie):
     user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 Edg/111.0.1661.62'
 
     # url地址
-    url = 'https://www.ddnsto.com/api/user/product/orders/'
-    routers_url = 'https://www.ddnsto.com/api/user/routers/'
+    url = 'https://web.ddnsto.com/api/user/product/orders/'
+    routers_url = 'https://web.ddnsto.com/api/user/routers/'
     body = {
         "product_id": 2,
         "uuid_from_client": ''.join(uuid.uuid1().__str__().split('-')),
@@ -62,10 +62,10 @@ def select_list(cookie):
         'User-Agent': user_agent,
         'Cookie': cookie,
         'Content-Type': 'application/json',
-        'Referer': 'https://www.ddnsto.com/app/',
+        'Referer': 'https://web.ddnsto.com/app/',
         'X-CSRFToken': csrftoken,
         'Connection': 'keep-alive',
-        'Host': 'www.ddnsto.com'
+        'Host': 'web.ddnsto.com'
     })
 
     logging.info('🍿开始调用接口地址')
