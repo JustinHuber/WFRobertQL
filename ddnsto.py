@@ -34,9 +34,9 @@ def select_list(cookie):
     # 获取令牌
     csrftoken = {}
     for line in cookie.split(';'):
-        key, value = line.split('=', 1)
+        key, value = line.strip().split('=', 1)
         csrftoken[key] = value
-    csrftoken = csrftoken.get(' csrftoken')
+    csrftoken = csrftoken.get('csrftoken')
     if csrftoken is not None:
         logging.info("🍪csrftoken获取成功")
 
