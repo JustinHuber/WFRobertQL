@@ -17,6 +17,8 @@ import re
 import time
 import rsa
 import requests
+import sys
+sys.path.append("..")
 import initialize
 
 BI_RM = list("0123456789abcdefghijklmnopqrstuvwxyz")
